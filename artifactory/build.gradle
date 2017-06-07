@@ -64,7 +64,11 @@ artifactory {
         repository {
             repoKey = 'gradle-dev-local'
             maven = true
-
+        }
+        defaults {
+            publications('jar')
+            publishArtifacts = true
+            publishPom = true
         }
     }
     resolve {
