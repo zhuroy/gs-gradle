@@ -1,5 +1,5 @@
-node {
-  def server = Artifactory.server 'newtechacademy.jfrog.io'
+node("jenkins_master") {
+  def server = Artifactory.server 'localhost'
   def myGradleContainer = docker.image('gradle:jdk8-alpine')
   myGradleContainer.pull()
   stage('prep') {
